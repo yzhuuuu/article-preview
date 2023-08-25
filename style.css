@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --des-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --font-size: 13px;
+  --font-manrope: "Manrope", sans-serif;
+}
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+body {
+  background-color: var(--light-grayish-blue);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 0 2rem;
+}
+.container {
+  max-width: 85vw;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.img-container {
+  height: 10rem;
+}
+.text-info {
+  margin-top: 1rem;
+}
+.text-info > div {
+  padding: 1.5rem;
+}
+.text-info div h5 {
+  color: var(--very-dark-grayish-blue);
+  font-family: var(--font-manrope);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.text-info div p {
+  color: var(--very-dark-grayish-blue);
+  line-height: 1.4;
+}
+.person > div > img {
+  border-radius: 50%;
+}
+.person > div > img,
+.person > img {
+  height: 3rem;
+  width: 3rem;
+}
+.person > div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.person > div > h5 {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-size: 1rem;
+}
+.person > div > h5 span {
+  font-size: 0.65rem;
+  color: var(--light-grayish-blue);
+}
+.person {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem 1.5rem;
+}
+.person > img {
+  height: 2rem;
+  width: 2em;
+  background-color: var(--light-grayish-blue);
+  padding: 8px;
+  border-radius: 50%;
+}
+.share-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: var(--very-dark-grayish-blue);
+  padding: 1.5rem 0;
+  border-radius: 0 0 10px 10px;
+}
+.share-section > div {
+  /*flex: 1;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 2rem;
+}
+.share-section > div > img {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+.share-btn {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.share-section > h6 {
+  color: var(--grayish-blue);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+.disable {
+  display: none;
+}
+@media screen and (min-width: 1080px) {
+  .container {
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    max-width: 50vw;
+  }
+  .img-container {
+    height: 100%;
+  }
+  .text-info {
+    position: relative;
+  }
+  .share-section {
+    position: absolute;
+    top: 7rem;
+    left: 20rem;
+    padding: 1.2rem;
+    border-radius: 15px;
+  }
+  .share-section {
+    gap: 0.5rem;
+  }
+  .share-section > div {
+    gap: 5px;
+  }
+  .share-section > div > img,
+  .share-btn {
+    height: 0.85rem;
+    width: 0.85rem;
+  }
+}
